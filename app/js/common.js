@@ -60,4 +60,20 @@ $(document).ready(function() {
       }
     }
   });
+
+  // interview carousel
+  $(".owl-carousel-interview").owlCarousel({
+    nav: true,
+    navText: [
+      "<div class='nav-btn prev-slide'><img src='./images/svg/arrow_prev.svg' class='owl-carousel-interview__nav-img'></div>",
+      "<div class='nav-btn next-slide'><img src='./images/svg/arrow_next.svg' class='owl-carousel-interview__nav-img'></div>"
+    ],
+    responsive: {
+      0: {
+        items: 1
+      }
+    }
+  });
+
+  //end
 });

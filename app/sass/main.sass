@@ -709,8 +709,107 @@
 .interview-section
   &__container
   &__title
-  &__
-  &__
+  &__carousel-container
+
+.owl-carousel-interview
+  &__slide
+    display: flex
+    justify-content: flex-end
+    position: relative
+    padding-bottom: 140px
+  &__video-block
+    position: absolute
+    top: 50px
+    left: 0
+    width: 100%
+    max-width: 560px
+    height: 390px
+  &__content-block
+    padding-left: 38%
+    padding-top: 90px
+    padding-bottom: 60px
+    padding-right: 50px
+    background-color: $main-blue
+    color: #fff
+    box-shadow: 0px 12px 29px rgba(0, 0, 0, 0.12)
+    border-radius: 0px 22px
+    width: 80%
+  &__content-title
+    font-family: "Montserrat-ExtraBold"
+    font-size: 20px
+    line-height: 24px
+    text-transform: uppercase
+    margin-bottom: 10px
+  &__content-subTitle
+    font-family: "Montserrat-Bold"
+    font-size: 14px
+    line-height: 19px
+    text-transform: uppercase
+    margin-bottom: 15px
+  &__text
+    font-family: "Montserrat"
+    font-size: 16px
+    line-height: 24px
+  &__full-link
+    position: absolute
+    bottom: 10%
+    display: flex
+    align-items: center
+    opacity: 0.4
+    color: #000
+  &__link-icon
+    max-width: 44px
+    margin-right: 20px
+  &__link-text
+    // margin-left: 20px
+
+.owl-theme .owl-nav [class*=owl-] img
+  max-width: 44px
+
+.owl-carousel-interview__content-block:before
+  content: '“'
+  display: block
+  font-family: "Montserrat-Bold"
+  position: absolute
+  font-size: 200px
+  color: #fff
+  opacity: 0.1
+  top: -20px
+  
+.owl-theme.owl-carousel-interview .owl-nav
+  left: -50px
+  right: -50px
+.owl-carousel.owl-carousel-interview .owl-dots
+  margin-top: 10px
+  margin-bottom: 10px
+
++media-breakpoint-down($xl)
+  .owl-theme.owl-carousel-interview .owl-nav
+    left: 0
+    right: 0
+  .owl-carousel-interview__full-link
+    display: none
+  .owl-carousel-interview__slide
+    background-color: $main-blue
+    padding: 30px 0 0 0
+    flex-direction: column
+    justify-content: center
+    border-radius: 0 22px
+  .owl-carousel-interview__video-block
+    height: 290px
+    position: initial  
+    width: 100%
+    max-width: initial  
+  .owl-carousel-interview__content-block
+    border-radius: 0 0 0 22px
+    width: 100%
+    box-shadow: none
+    padding: 60px  40px 40px
+  .owl-carousel-interview__content-block:before
+    top: 260px
+    font-size: 250px
+
+
 
 //
 // students-work
