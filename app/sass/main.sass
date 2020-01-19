@@ -9,6 +9,7 @@
 
 .vcontainer
   font-family: "Montserrat"
+  overflow: hidden
 .vcontainer img
   width: 100%
   height: auto
@@ -101,6 +102,7 @@
   &__next
     margin-left: 20px
   &__img
+    max-width: 44px
 
 .carousel-nav__prev:hover,
 .carousel-nav__next:hover
@@ -515,8 +517,8 @@
   .section-title
     padding-bottom: 30px
   .section-padding
-    padding-top: 50px
-    padding-bottom: 30px
+    padding-top: 60px
+    padding-bottom: 60px
 +media-breakpoint-down($sm)
   .section-title
     font-size: 24px
@@ -655,6 +657,9 @@
     top: 0
     right: 0
   &__img
+  &__btn
+    text-align: center
+    margin-bottom: 30px
 
 .training-content-section__row:before
   content: ''
@@ -669,6 +674,33 @@
 .training-content-section__row:last-child
   margin-bottom: 0
 
+.training-content-section__row.invert
+  flex-direction: row-reverse
+.training-content-section__row.invert .training-content-section__image-block
+  left: 0
+  right: initial
+.training-content-section__row.invert .training-content-section__content-block
+  border-radius: 22px 0
+
++media-breakpoint-down($lg)
+  .training-content-section__image-block
+    width: 50%
+  .training-content-section__row:before
+    bottom: 15%
+    right: 0
+    left: 0
++media-breakpoint-down($md)
+  .training-content-section__content-block
+    width: 100%
+    margin-right: 30px
+    padding: 40px 35px 
+  .training-content-section__image-block
+    width: 80%
+  .training-content-section__btn
+    margin-bottom: 0
+  .training-content-section__row
+    margin-bottom: 40px
+    
 
 //
 // interview-section
