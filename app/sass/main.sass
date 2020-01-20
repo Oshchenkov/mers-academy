@@ -15,7 +15,7 @@
   height: auto
 
 .hero-u
-  background-image: url(/images/svg/decor-bg.svg)
+  background-image: url(https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/decor-bg.svg)
   background-repeat: repeat
   position: relative
   &:before
@@ -128,6 +128,7 @@
     color: #fff
     font-size: 24px
     font-weight: bold
+    width: 40px
     &::before
       content: ""
       display: block
@@ -270,7 +271,7 @@
 //
 
 .history-successful
-  background-image: url(/images/svg/decor-bg.svg)
+  background-image: url(https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/decor-bg.svg)
   background-repeat: repeat
   position: relative
   &__container
@@ -369,7 +370,7 @@
 
 
 .reviews-sect
-  background-image: url('/images/review-BG.png')
+  background-image: url(https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/review-BG.png)
   background-repeat: no-repeat
   background-size: cover
   background-position: center bottom
@@ -445,7 +446,9 @@
   left: 0
   z-index: -1
   
-  
+.owl-carousel .owl-item img
+  height: 100%
+
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev
   width: 96px
   height: 65px
@@ -524,7 +527,7 @@
     font-size: 24px
 
 .decor-bg
-  background-image: url(/images/svg/decor-bg.svg)
+  background-image: url(https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/decor-bg.svg)
   background-repeat: repeat
   position: relative
 
@@ -577,7 +580,8 @@
   &__btn
     padding-bottom: 10px
 
-.main-btn
+.main-btn,
+.sg-show-popup
   font-family: 'Montserrat',sans-serif
   font-size: 14px
   border-radius: 4px
@@ -588,12 +592,15 @@
   transition: all .3s
   font-weight: 600
   padding: 16px 40px
-  &:hover,
-  &:focus,
-  &:active
-    background-color: #4770c0
-    border-color: #4770c0
-    color: #fff
+.main-btn:hover,
+.main-btn:focus,
+.main-btn:active,
+.sg-show-popup:hover,
+.sg-show-popup:focus,
+.sg-show-popup:active
+  background-color: #4770c0
+  border-color: #4770c0
+  color: #fff
 
 .main-btn_full
   width: 100%
@@ -763,6 +770,10 @@
   &__link-text
     // margin-left: 20px
 
+.owl-carousel-interview__full-link:hover
+  color: #000
+  opacity: 0.8
+  
 .owl-theme .owl-nav [class*=owl-] img
   max-width: 44px
 

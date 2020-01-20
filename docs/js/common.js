@@ -30,8 +30,8 @@ $(document).ready(function() {
     margin: 30,
     nav: true,
     navText: [
-      "<div class='nav-btn prev-slide'><img src='./images/svg/arrow_prev.svg' class='owl-carousel-reviews__nav-img'></div>",
-      "<div class='nav-btn next-slide'><img src='./images/svg/arrow_next.svg' class='owl-carousel-reviews__nav-img'></div>"
+      "<div class='nav-btn prev-slide'><img src='https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/arrow_prev.svg' class='owl-carousel-reviews__nav-img'></div>",
+      "<div class='nav-btn next-slide'><img src='https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/arrow_next.svg' class='owl-carousel-reviews__nav-img'></div>"
     ],
     responsive: {
       0: {
@@ -48,8 +48,8 @@ $(document).ready(function() {
     margin: 30,
     nav: true,
     navText: [
-      "<div class='nav-btn prev-slide'><img src='./images/svg/arrow_prev.svg' class='owl-carousel-news__nav-img'></div>",
-      "<div class='nav-btn next-slide'><img src='./images/svg/arrow_next.svg' class='owl-carousel-news__nav-img'></div>"
+      "<div class='nav-btn prev-slide'><img src='https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/arrow_prev.svg' class='owl-carousel-news__nav-img'></div>",
+      "<div class='nav-btn next-slide'><img src='https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/arrow_next.svg' class='owl-carousel-news__nav-img'></div>"
     ],
     responsive: {
       0: {
@@ -65,8 +65,8 @@ $(document).ready(function() {
   $(".owl-carousel-interview").owlCarousel({
     nav: true,
     navText: [
-      "<div class='nav-btn prev-slide'><img src='./images/svg/arrow_prev.svg' class='owl-carousel-interview__nav-img'></div>",
-      "<div class='nav-btn next-slide'><img src='./images/svg/arrow_next.svg' class='owl-carousel-interview__nav-img'></div>"
+      "<div class='nav-btn prev-slide'><img src='https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/arrow_prev.svg' class='owl-carousel-interview__nav-img'></div>",
+      "<div class='nav-btn next-slide'><img src='https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/arrow_next.svg' class='owl-carousel-interview__nav-img'></div>"
     ],
     responsive: {
       0: {
