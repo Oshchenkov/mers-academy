@@ -18,7 +18,7 @@ $(document).ready(function() {
     carouselSlidesCurrent.html("0" + (e.to + 1));
   });
   $("#heroCarouselWithIndex").carousel({
-    interval: 0
+    interval: 3000
   });
 
   $(".carousel-indicator__general").html("0" + carouselSlidesCount);
@@ -86,15 +86,16 @@ $(document).ready(function() {
     trainingArray.slice(0, count).css("display", "flex");
   }
   showTrainingPosts(defaultNumberOfPosts);
-
-  trShowMoreBtn.addEventListener("click", e => {
-    e.preventDefault();
-    currentIndexOfPosts++;
-    showTrainingPosts(currentIndexOfPosts);
-    if (trainingArray.length === currentIndexOfPosts) {
-      $(trShowMoreBtn).hide();
-    }
-  });
+  if (trShowMoreBtn) {
+    trShowMoreBtn.addEventListener("click", e => {
+      e.preventDefault();
+      currentIndexOfPosts += 3;
+      showTrainingPosts(currentIndexOfPosts);
+      if (trainingArray.length <= currentIndexOfPosts) {
+        $(trShowMoreBtn).hide();
+      }
+    });
+  }
 
   //end
 });
