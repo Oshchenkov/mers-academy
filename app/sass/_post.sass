@@ -1,0 +1,203 @@
+// 
+// post-hero-section
+//
+
+.post-hero-section
+  min-height: 500px
+  background-image: url(https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/decor-bg.svg)
+  background-repeat: repeat
+  position: relative
+  display: flex
+  &__container
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &__date
+    font-family: "Montserrat-Bold"
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 10px
+  &__title.section-title
+    text-align: left 
+    font-size: 36px
+    padding-bottom: 15px
+  &__subTitle
+    line-height: normal
+.post-hero-section__container:before
+  display: inline-block
+  content: "Статья"
+  text-transform: uppercase
+  font-family: 'Montserrat-ExtraBold',sans-serif
+  font-size: 210px
+  opacity: 0.05
+  z-index: -1
+  color: #000
+  position: absolute
+  top: 6%
+
++media-breakpoint-down($xl)
+  .post-hero-section__container:before
+    font-size: 150px
+    top: 20%
+
++media-breakpoint-down($sm)
+  .post-hero-section
+    min-height: 450px
+  .post-hero-section__title.section-title
+    font-size: 24px
+  .post-hero-section__date
+    font-size: 14px
+  .post-hero-section__subTitle
+    font-size: 12px
+  
+
+
+// 
+// post-content
+//
+
+.post-content
+  background-color: #F6F6F6
+  &__container
+  &__head-block
+  &__title.post-title
+    margin-top: 45px
+  &__text-block
+    font-family: "Montserrat",sans-serif
+    font-size: 16px
+    line-height: 1.6
+    padding-left: 30px
+    position: relative
+    margin-bottom: 30px
+  &__dual-images
+    display: flex
+    margin: 60px 0
+  &__dual-block
+  &__dual-image
+    display: block
+    border-radius: 0 22px
+
+.post-content__dual-block
+  margin: 0 15px
+.post-content__dual-block:first-child
+  margin-left: 0
+.post-content__dual-block:last-child
+  margin-right: 0
+
+.post-content h2
+  font-size: 30px
+.post-content h3
+  font-size: 26px
+.post-content h4
+  font-size: 20px
+.post-content h5
+  font-size: 18px
+.vcontainer .post-content img
+  width: initial
+  height: initial
+  
+.post-content__text-block:before
+  display: block
+  content: ''
+  width: 6px
+  height: 100%
+  background-color: #2F5192
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+
+.graphical-content
+  position: relative
+  display: flex
+  padding-top: 170px
+  justify-content: flex-end
+  margin: 60px 0
+  &__image-block
+    position: absolute
+    width: 590px
+    height: 395px
+    top: 0
+    left: 0
+  &__img
+    width: 100%
+    height: auto
+    object-fit: cover
+    object-position: center
+    border-radius: 0 22px
+  &__text-block
+    background-color: #fff
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1)
+    padding: 55px 65px
+    z-index: 2
+    position: relative
+    max-width: 590px
+  &__text
+    font-family: "Montserrat",sans-serif
+    font-size: 16px
+    line-height: 1.6
+    position: relative
+
+.post-content__text-block p
+  margin-bottom: 30px
+.post-content__text-block p:last-child
+  margin-bottom: 0
+
+.graphical-content:before
+  display: block
+  content: ''
+  width: 320px
+  height: 200px
+  border: 5px solid #2F5192
+  box-sizing: border-box
+  position: absolute
+  top: 115px
+  left: 40%
+  z-index: 0
+  
+.post-content__head-block>.post-content__title.post-title
+  margin-top: 0
+.post-content__last-block .graphical-content
+  margin-bottom: 0
+  
++media-breakpoint-up($xl)
+  .graphical-content__text-block
+    margin-right: 5%
+
++media-breakpoint-down($md)
+  .graphical-content
+    padding-top: 0
+    flex-direction: column
+  .graphical-content__image-block
+    width: 100%
+    height: auto
+    max-width: 250px
+    margin: 0 auto
+  .graphical-content__image-block
+    position: relative
+    padding-bottom: 40px
+  .graphical-content:before
+    width: 100%
+    left: 0
+  .post-content__dual-images
+    flex-direction: column
+  .post-content__dual-block
+    margin: 0 0 30px 0
+  .post-content__dual-block:last-child
+    margin-bottom: 0
++media-breakpoint-down($sm)
+  .post-content__title.post-title
+    font-size: 20px
+  .post-content__text-block
+    font-size: 12px
+  .graphical-content__text-block
+    padding: 30px
+  .graphical-content__text
+    font-size: 12px
+  .post-content h3
+    font-size: 18px
+  .post-content h4
+    font-size: 16px
+  .post-content h5
+    font-size: 14px

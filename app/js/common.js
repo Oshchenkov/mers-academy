@@ -18,7 +18,7 @@ $(document).ready(function() {
     carouselSlidesCurrent.html("0" + (e.to + 1));
   });
   $("#heroCarouselWithIndex").carousel({
-    interval: 0
+    interval: 3000
   });
 
   $(".carousel-indicator__general").html("0" + carouselSlidesCount);
@@ -74,6 +74,28 @@ $(document).ready(function() {
       }
     }
   });
+
+  // load more trainings
+
+  const trainingArray = $(".training-content-section__row-block").children();
+  const trShowMoreBtn = $(".training-content-section__btn-more .main-btn")[0];
+  const defaultNumberOfPosts = 3;
+  let currentIndexOfPosts = defaultNumberOfPosts;
+
+  function showTrainingPosts(count) {
+    trainingArray.slice(0, count).css("display", "flex");
+  }
+  showTrainingPosts(defaultNumberOfPosts);
+  if (trShowMoreBtn) {
+    trShowMoreBtn.addEventListener("click", e => {
+      e.preventDefault();
+      currentIndexOfPosts += 3;
+      showTrainingPosts(currentIndexOfPosts);
+      if (trainingArray.length <= currentIndexOfPosts) {
+        $(trShowMoreBtn).hide();
+      }
+    });
+  }
 
   //end
 });

@@ -75,5 +75,26 @@ $(document).ready(function() {
     }
   });
 
+  // load more trainings
+
+  const trainingArray = $(".training-content-section__row-block").children();
+  const trShowMoreBtn = $(".training-content-section__btn-more .main-btn")[0];
+  const defaultNumberOfPosts = 3;
+  let currentIndexOfPosts = defaultNumberOfPosts;
+
+  function showTrainingPosts(count) {
+    trainingArray.slice(0, count).css("display", "flex");
+  }
+  showTrainingPosts(defaultNumberOfPosts);
+
+  trShowMoreBtn.addEventListener("click", e => {
+    e.preventDefault();
+    currentIndexOfPosts++;
+    showTrainingPosts(currentIndexOfPosts);
+    if (trainingArray.length === currentIndexOfPosts) {
+      $(trShowMoreBtn).hide();
+    }
+  });
+
   //end
 });

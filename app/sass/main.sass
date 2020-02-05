@@ -3,12 +3,12 @@
 @import "fonts"    
 // @import "reboot" if used bootstrap 4 do not need include twice
 
-
+@import "post"
 
 @import "media" // Always at the end
 
 .vcontainer
-  font-family: "Montserrat"
+  font-family: "Montserrat",sans-serif
   overflow: hidden
 .vcontainer img
   width: 100%
@@ -190,7 +190,22 @@
     padding-bottom: 280px
   .hero-u__content
     top: 20%
-  
+  .hero-u__content
+    min-height: 400px
+    position: relative
+    display: flex
+    flex-direction: column
+    justify-content: center
+  .hero-u__image
+    display: none
+  .hero-u__container
+    background-image: url(https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/hero-mob.png)
+    background-repeat: no-repeat
+    position: relative
+    background-size: contain
+    background-position: center right
+
+
 //
 // Info section
 //
@@ -201,10 +216,11 @@
   padding: 20px 0
   &__container
     display: flex
-    justify-content: space-between
+    justify-content: flex-end
   &__place-block
     display: flex
     align-items: center
+    display: none
   &__place-text
     margin-left: 25px
     font-family: 'Montserrat',sans-serif
@@ -287,6 +303,8 @@
     position: relative
     margin-bottom: 60px
   &__image-block
+    max-width: 590px
+    max-height: 400px
   &__img
     border-radius: 0 24px
     width: 100%
@@ -508,7 +526,8 @@
 .section-padding
   padding-top: 100px
   padding-bottom: 90px
-.section-title
+.section-title,
+.post-title
   text-transform: uppercase
   font-family: "Montserrat-ExtraBold",sans-serif
   font-size: 30px
@@ -516,6 +535,9 @@
   text-align: center
   margin: 0
   padding-bottom: 60px
+.post-title
+  padding-bottom: 40px
+  text-align: left
 +media-breakpoint-down($lg)
   .section-title
     padding-bottom: 30px
@@ -524,7 +546,8 @@
     padding-bottom: 60px
 +media-breakpoint-down($sm)
   .section-title
-    font-size: 24px
+    font-size: 20px
+  
 
 .decor-bg
   background-image: url(https://mers-academy.ru/wp-content/themes/mers/inc/assets/images/svg/decor-bg.svg)
@@ -556,6 +579,9 @@
   &__date
   &__image-block
     height: 250px
+    display: block
+    &:hover
+      text-decoration: none
   &__img
     width: 100%
     height: 100%
@@ -571,6 +597,10 @@
     text-transform: uppercase
     color: #000
     margin-bottom: 20px
+    display: block
+    &:hover
+      color: #000
+      text-decoration: none
   &__text
     margin-bottom: 30px
     font-family: 'Montserrat',sans-serif
@@ -581,12 +611,12 @@
     padding-bottom: 10px
 
 .main-btn,
-.sg-show-popup
+a.sg-show-popup
   font-family: 'Montserrat',sans-serif
   font-size: 14px
   border-radius: 4px
   display: inline-block
-  color: #fff
+  color: #fff !important
   background-color: #2f5192 
   border: 1px solid #2f5192
   transition: all .3s
@@ -595,9 +625,9 @@
 .main-btn:hover,
 .main-btn:focus,
 .main-btn:active,
-.sg-show-popup:hover,
-.sg-show-popup:focus,
-.sg-show-popup:active
+a.sg-show-popup:hover,
+a.sg-show-popup:focus,
+a.sg-show-popup:active
   background-color: #4770c0
   border-color: #4770c0
   color: #fff
@@ -642,6 +672,10 @@
     background-color: #fff
     border-radius: 0 22px
     padding: 50px 60px
+    min-height: 430px
+    display: flex
+    flex-direction: column
+    justify-content: center
   &__content-title
     font-family: "Montserrat-ExtraBold"
     text-transform: uppercase
@@ -659,14 +693,17 @@
   &__btn
   &__image-block
     position: absolute
-    // width: 40%
-    max-width: 780px
+    height: 520px
+    width: 780px
     top: 0
     right: 0
   &__img
-  &__btn
+    object-fit: cover
+    object-position: center
+  &__btn-more
     text-align: center
     margin-bottom: 30px
+    margin-top: 60px
 
 .training-content-section__row:before
   content: ''
@@ -689,6 +726,15 @@
 .training-content-section__row.invert .training-content-section__content-block
   border-radius: 22px 0
 
+.training-content-section__row
+  display: none
+
++media-breakpoint-down($xl)
+  .training-content-section__image-block
+    width: 60%
+    height: initial
+  .training-content-section__content-block
+    min-height: initial
 +media-breakpoint-down($lg)
   .training-content-section__image-block
     width: 50%
@@ -696,6 +742,7 @@
     bottom: 15%
     right: 0
     left: 0
+  
 +media-breakpoint-down($md)
   .training-content-section__content-block
     width: 100%
@@ -707,7 +754,10 @@
     margin-bottom: 0
   .training-content-section__row
     margin-bottom: 40px
+  .training-content-section__btn
+    margin-top: 30px
     
+
 
 //
 // interview-section
