@@ -1,8 +1,14 @@
-# OptimizedSassTemplate
+# mers-academy HTML template based on the gulp/sass package for wordpress web site
 
-[Optimized SASS template](https://github.com/Oshchenkov/OptimizedSassTemplate) with gulp. Ready for gitHub /doc demo show.
+[gulp/sass package - OptimizedSassTemplate](https://github.com/Oshchenkov/OptimizedSassTemplate)
 
-## For installing you need:
+## Demo pages:
+
+[Main](https://oshchenkov.github.io/mers-academy/)
+
+[Post page](https://oshchenkov.github.io/mers-academy/post.html)
+
+### For installing you need:
 
 Run in terminal(need to have installed npm)
 
